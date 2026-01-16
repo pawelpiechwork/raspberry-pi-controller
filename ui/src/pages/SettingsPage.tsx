@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Flex, Table, Button, Modal, Form, Input, message, Typography, Card } from 'antd'
+import { Flex, Table, Button, Modal, Form, Input, message, Card } from 'antd'
 import { EditOutlined, ReloadOutlined } from '@ant-design/icons'
 import { useGetLightsQuery, type Light } from './lightsPage/useGetLightsQuery'
 import { useUpdateLightConfigMutation, type LightConfigUpdate } from './settingsPage/useUpdateLightConfigMutation'
