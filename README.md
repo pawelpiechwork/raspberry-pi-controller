@@ -19,3 +19,5 @@ System po zmianie stanu **nie zakłada**, że wszystko zadziałało:
 3. Ten odczytany stan zwraca do UI i zapisuje w historii.
 
 Czyli stan w aplikacji i w logach wynika z **realnego odczytu**, a nie tylko z polecenia „włącz".
+
+<!-- https://www.figma.com/design/sQ5kNA23Bmw0LgJQnXZKI4/System-sterowania-o%C5%9Bwietleniem-oparty-na-Raspberry-Pi?node-id=3-7&t=4oznhZ2L09ZAT64H-1 -->
