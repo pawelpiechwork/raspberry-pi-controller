@@ -40,8 +40,12 @@ export const gpioSet = async (pin: number, value: 0 | 1): Promise<0 | 1> => {
 };
 
 export const killAllGpio = async (): Promise<void> => {
-  await execa`pkill gpioset`.catch(() => {});
-  await execa`pkill gpiomon`.catch(() => {});
+   await Promise.all([
+    execa("pkill", ["-CONT", "gpiomon"], { reject: false }),
+    execa("pkill", ["-CONT", "gpioset"], { reject: false }),
+    execa("pkill", ["-KILL", "gpiomon"], { reject: false }),
+    execa("pkill", ["-KILL", "gpioset"], { reject: false }),
+  ]);
 };
 
 export const initPins = async (pins: number[]): Promise<void> => {
