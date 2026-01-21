@@ -29,7 +29,10 @@ export const gpioSet = async (pin: number, value: 0 | 1): Promise<0 | 1> => {
 
   // gpioset is expected to be killed on state change – ignore SIGTERM errors
   setter.catch((err: { isTerminated?: boolean }) => {
-    if (err?.isTerminated) return;
+    if (err?.isTerminated) {
+      return;
+    }
+
     console.error("gpioset failed", err);
   });
 
